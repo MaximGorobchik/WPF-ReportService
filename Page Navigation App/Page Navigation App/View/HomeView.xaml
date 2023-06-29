@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Page_Navigation_App.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Page_Navigation_App.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="600"
+             d:DesignWidth="622">
+    <UserControl.DataContext>
+        <vm:HomeViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <WrapPanel>
+            <TextBlock Text="Beta(v.01)" Foreground="Red" FontSize="30" Margin="10" />
+            <TextBlock Text="Організація має кілька відділів, кожен з яких відповідає за набір категорій проблем, у яких користувачі можуть подавати звіти. У кожному відділі є співробітники, яким доручають звітувати." Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Users - користувачі - містить інформацію про осіб, які подають звіти" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Reports - містить інформацію про проблеми" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Employees - містить інформацію про працівників" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Departments - містить відомості про відділи" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Categories - містить інформацію про категорії звітів" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+            <TextBlock Text="⦁ Status - містить інформацію про можливий статус" Margin="10" TextWrapping="Wrap" FontSize="20" Foreground="Green" />
+        </WrapPanel>
+    </Grid>
+</UserControl>

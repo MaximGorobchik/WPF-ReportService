@@ -1,0 +1,20 @@
+﻿ReportServiceWPF
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\МАКСИМ\source\repos\ReportServiceWPF\Page Navigation App\Page Navigation App\obj\Debug\net6.0-windows\
+Page_Navigation_App
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\МАКСИМ\source\repos\ReportServiceWPF\Page Navigation App\Page Navigation App\App.xaml
+171958907214
+81916553211
+33-291481273
+195-1033412185
+MainWindow.xaml;Styles\Button.xaml;Styles\Image.xaml;Styles\Page.xaml;Styles\Text.xaml;Utilities\DataTemplate.xaml;View\AddCategoryForm.xaml;View\AddUserForm.xaml;View\CategoriesView.xaml;View\DepartmentsView.xaml;View\EditCategoryForm.xaml;View\EditUserForm.xaml;View\EmployeesView.xaml;View\HomeView.xaml;View\ReportsView.xaml;View\StatusView.xaml;View\UsersView.xaml;
+
+False
+

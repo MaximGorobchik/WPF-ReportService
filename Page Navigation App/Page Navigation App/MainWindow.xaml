@@ -1,0 +1,181 @@
+﻿<Window x:Class="Page_Navigation_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Menu="clr-namespace:Page_Navigation_App.Utilities"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600"
+        Width="900"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent">
+
+    <Grid>
+
+        <!--// Window Border //-->
+
+        <Border Background="#212529"
+                CornerRadius="20" />
+
+        <Grid>
+
+            <!--// Base Grid //-->
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228" />
+                <ColumnDefinition Width="622" />
+            </Grid.ColumnDefinitions>
+
+            <!--// Navigation Panel //-->
+
+            <Grid HorizontalAlignment="Left"
+                  Width="228">
+
+                <Border Background="#272B2F"
+                        CornerRadius="20,0,0,20" />
+
+                <StackPanel Height="400"
+                            Width="228">
+
+                    <!--// Home //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding HomeCommand}"
+                              IsChecked="True">
+
+                        <Grid>
+
+                            <Image Source="Images/img_home.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Home"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// User //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding UsersCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_customer.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Users"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Categories //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding CategoriesCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_product.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Categories"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Report //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding ReportsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_order.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Reports"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Employee //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding EmployeesCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/employee.png"
+                                   Style="{StaticResource Image_Style}" Height="42" Margin="16,0,0,0" Width="40" />
+
+                            <TextBlock Text="Employees"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Department //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding DepartmentsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_shipment.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Departments"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Status //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding StatusCommand}">
+                        <Grid>
+
+                            <Image Source="Images/Status.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Status"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <ContentControl x:Name="Pages"
+                                Content="{Binding SelectedViewModel}" Margin="10,34,0,34"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Button x:Name="CloseApp"
+                Style="{StaticResource ExitApp}"
+                Click="CloseApp_Click" />
+
+    </Grid>
+
+</Window>
